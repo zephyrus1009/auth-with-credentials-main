@@ -1,3 +1,5 @@
+// file này hiển thị user info và một nút signout
+// vì có button onclick và dùng useSession hook, nên nó phải là client component
 "use client";
 
 import { signOut } from "next-auth/react";
@@ -5,7 +7,7 @@ import { useSession } from "next-auth/react";
 
 export default function UserInfo() {
   const { data: session } = useSession();
-
+//lấy data từ useSession và đổi tên thành session
   return (
     <div className="grid place-items-center h-screen">
       <div className="shadow-lg p-8 bg-zince-300/10 flex flex-col gap-2 my-6">
